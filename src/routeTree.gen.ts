@@ -9,25 +9,25 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TutorRouteImport } from './routes/tutor'
-import { Route as AuthRouteImport } from './routes/auth'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as SectionSectionIdRouteImport } from './routes/section.$sectionId'
-import { Route as PracticeUnitRouteImport } from './routes/practice.$unit'
-import { Route as MockExamUnitRouteImport } from './routes/mock-exam.$unit'
-import { Route as ApiTtsRouteImport } from './routes/api/tts'
-import { Route as ApiTranscribeRouteImport } from './routes/api/transcribe'
-import { Route as ApiMockExamRouteImport } from './routes/api/mock-exam'
-import { Route as ApiExercisesRouteImport } from './routes/api/exercises'
-import { Route as ApiExamRouteImport } from './routes/api/exam'
-import { Route as ApiChatHomeRouteImport } from './routes/api/chat-home'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as TutorRouteImport } from './routes/tutor'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as ApiChatHomeRouteImport } from './routes/api/chat-home'
+import { Route as ApiExamRouteImport } from './routes/api/exam'
+import { Route as ApiExercisesRouteImport } from './routes/api/exercises'
+import { Route as ApiMockExamRouteImport } from './routes/api/mock-exam'
+import { Route as ApiTranscribeRouteImport } from './routes/api/transcribe'
+import { Route as ApiTtsRouteImport } from './routes/api/tts'
+import { Route as MockExamUnitRouteImport } from './routes/mock-exam.$unit'
+import { Route as PracticeUnitRouteImport } from './routes/practice.$unit'
+import { Route as SectionSectionIdRouteImport } from './routes/section.$sectionId'
 import { Route as PracticeUnitIndexRouteImport } from './routes/practice.$unit.index'
 import { Route as PracticeUnitSkillRouteImport } from './routes/practice.$unit.$skill'
 
-const TutorRoute = TutorRouteImport.update({
-  id: '/tutor',
-  path: '/tutor',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -35,49 +35,14 @@ const AuthRoute = AuthRouteImport.update({
   path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const TutorRoute = TutorRouteImport.update({
+  id: '/tutor',
+  path: '/tutor',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SectionSectionIdRoute = SectionSectionIdRouteImport.update({
-  id: '/section/$sectionId',
-  path: '/section/$sectionId',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PracticeUnitRoute = PracticeUnitRouteImport.update({
-  id: '/practice/$unit',
-  path: '/practice/$unit',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MockExamUnitRoute = MockExamUnitRouteImport.update({
-  id: '/mock-exam/$unit',
-  path: '/mock-exam/$unit',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiTtsRoute = ApiTtsRouteImport.update({
-  id: '/api/tts',
-  path: '/api/tts',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiTranscribeRoute = ApiTranscribeRouteImport.update({
-  id: '/api/transcribe',
-  path: '/api/transcribe',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiMockExamRoute = ApiMockExamRouteImport.update({
-  id: '/api/mock-exam',
-  path: '/api/mock-exam',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiExercisesRoute = ApiExercisesRouteImport.update({
-  id: '/api/exercises',
-  path: '/api/exercises',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiExamRoute = ApiExamRouteImport.update({
-  id: '/api/exam',
-  path: '/api/exam',
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiChatHomeRoute = ApiChatHomeRouteImport.update({
@@ -85,9 +50,44 @@ const ApiChatHomeRoute = ApiChatHomeRouteImport.update({
   path: '/api/chat-home',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiChatRoute = ApiChatRouteImport.update({
-  id: '/api/chat',
-  path: '/api/chat',
+const ApiExamRoute = ApiExamRouteImport.update({
+  id: '/api/exam',
+  path: '/api/exam',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiExercisesRoute = ApiExercisesRouteImport.update({
+  id: '/api/exercises',
+  path: '/api/exercises',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiMockExamRoute = ApiMockExamRouteImport.update({
+  id: '/api/mock-exam',
+  path: '/api/mock-exam',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiTranscribeRoute = ApiTranscribeRouteImport.update({
+  id: '/api/transcribe',
+  path: '/api/transcribe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiTtsRoute = ApiTtsRouteImport.update({
+  id: '/api/tts',
+  path: '/api/tts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MockExamUnitRoute = MockExamUnitRouteImport.update({
+  id: '/mock-exam/$unit',
+  path: '/mock-exam/$unit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PracticeUnitRoute = PracticeUnitRouteImport.update({
+  id: '/practice/$unit',
+  path: '/practice/$unit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SectionSectionIdRoute = SectionSectionIdRouteImport.update({
+  id: '/section/$sectionId',
+  path: '/section/$sectionId',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PracticeUnitIndexRoute = PracticeUnitIndexRouteImport.update({
@@ -223,11 +223,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/tutor': {
-      id: '/tutor'
-      path: '/tutor'
-      fullPath: '/tutor'
-      preLoaderRoute: typeof TutorRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -237,67 +237,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/tutor': {
+      id: '/tutor'
+      path: '/tutor'
+      fullPath: '/tutor'
+      preLoaderRoute: typeof TutorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/section/$sectionId': {
-      id: '/section/$sectionId'
-      path: '/section/$sectionId'
-      fullPath: '/section/$sectionId'
-      preLoaderRoute: typeof SectionSectionIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/practice/$unit': {
-      id: '/practice/$unit'
-      path: '/practice/$unit'
-      fullPath: '/practice/$unit'
-      preLoaderRoute: typeof PracticeUnitRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mock-exam/$unit': {
-      id: '/mock-exam/$unit'
-      path: '/mock-exam/$unit'
-      fullPath: '/mock-exam/$unit'
-      preLoaderRoute: typeof MockExamUnitRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/tts': {
-      id: '/api/tts'
-      path: '/api/tts'
-      fullPath: '/api/tts'
-      preLoaderRoute: typeof ApiTtsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/transcribe': {
-      id: '/api/transcribe'
-      path: '/api/transcribe'
-      fullPath: '/api/transcribe'
-      preLoaderRoute: typeof ApiTranscribeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/mock-exam': {
-      id: '/api/mock-exam'
-      path: '/api/mock-exam'
-      fullPath: '/api/mock-exam'
-      preLoaderRoute: typeof ApiMockExamRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/exercises': {
-      id: '/api/exercises'
-      path: '/api/exercises'
-      fullPath: '/api/exercises'
-      preLoaderRoute: typeof ApiExercisesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/exam': {
-      id: '/api/exam'
-      path: '/api/exam'
-      fullPath: '/api/exam'
-      preLoaderRoute: typeof ApiExamRouteImport
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/chat-home': {
@@ -307,11 +258,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiChatHomeRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/chat': {
-      id: '/api/chat'
-      path: '/api/chat'
-      fullPath: '/api/chat'
-      preLoaderRoute: typeof ApiChatRouteImport
+    '/api/exam': {
+      id: '/api/exam'
+      path: '/api/exam'
+      fullPath: '/api/exam'
+      preLoaderRoute: typeof ApiExamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/exercises': {
+      id: '/api/exercises'
+      path: '/api/exercises'
+      fullPath: '/api/exercises'
+      preLoaderRoute: typeof ApiExercisesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/mock-exam': {
+      id: '/api/mock-exam'
+      path: '/api/mock-exam'
+      fullPath: '/api/mock-exam'
+      preLoaderRoute: typeof ApiMockExamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/transcribe': {
+      id: '/api/transcribe'
+      path: '/api/transcribe'
+      fullPath: '/api/transcribe'
+      preLoaderRoute: typeof ApiTranscribeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/tts': {
+      id: '/api/tts'
+      path: '/api/tts'
+      fullPath: '/api/tts'
+      preLoaderRoute: typeof ApiTtsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mock-exam/$unit': {
+      id: '/mock-exam/$unit'
+      path: '/mock-exam/$unit'
+      fullPath: '/mock-exam/$unit'
+      preLoaderRoute: typeof MockExamUnitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/practice/$unit': {
+      id: '/practice/$unit'
+      path: '/practice/$unit'
+      fullPath: '/practice/$unit'
+      preLoaderRoute: typeof PracticeUnitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/section/$sectionId': {
+      id: '/section/$sectionId'
+      path: '/section/$sectionId'
+      fullPath: '/section/$sectionId'
+      preLoaderRoute: typeof SectionSectionIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/practice/$unit/': {
