@@ -45,7 +45,293 @@ export const partC4A_translations: Record<number, string> = {
   5: "Fresco ပန်းချီ — နံရံ၏ စိုစွတ်သော အင်္ဂတေသားပေါ်တွင် ရေးဆွဲသည် — စိုစွတ်သော အင်္ဂတေသားပေါ်သို့ လျင်မြန်စွာ သုတ်လိမ်းသော ရေဆေး",
 };
 
+/* ------------- 4A Sentence-structure breakdowns (curated) --------------- */
+// Rules for this data:
+//  • Grammar tags stay in English; every translation string is pure Burmese.
+//  • The real predicate verb is isolated as [Main Verb]; prepositions are
+//    never a verb — they travel with their whole phrase.
+//  • Translations follow Burmese SOV order, phrase by phrase.
+
+export type SentenceBreakdown = {
+  introMy: string;
+  noteMy: string;
+  cars: TrainCar[];
+};
+
+const SV_INTRO4 =
+  "ဤဝါကျကို အပိုင်းလိုက် ခွဲကြည့်ပါ — မည်သူ/မည်သည့်အရာ (ကတ္တား) ၊ ဘာလုပ်သည်/ဘာဖြစ်သည် (ကြိယာ) ၊ ဘာကို (ကံ) ဟူ၍ ဖြစ်သည်။";
+const SV_NOTE4 =
+  "ပုံစံ: ကတ္တား → ကြိယာ → ကံ ။ ဝိဘတ်စကားစုများကို တစ်လုံးချင်း မဖတ်ဘဲ စကားစုတစ်ခုလုံးအဖြစ် ဖတ်ပါ။";
+const WH_INTRO4 =
+  "မေးခွန်းဝါကျဖြစ်သဖြင့် မေးခွန်းစကားလုံးက ရှေ့ဆုံးတွင် ရပ်ပြီး အကူကြိယာက ကတ္တားရှေ့သို့ ရွှေ့သွားသည်။";
+const WH_NOTE4 =
+  "ပုံစံ: မေးခွန်းစကားလုံး → အကူကြိယာ → ကတ္တား → ကြိယာ/ကံ ။ မြန်မာလို ပြန်ဆိုသည့်အခါ ကြိယာကို နောက်ဆုံးတွင် ထားပါ။";
+
+export const partA4A_breakdowns: Record<number, SentenceBreakdown> = {
+  1: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "One word", translation: "စကားလုံးတစ်လုံးသည်", tag: "Noun Subject" },
+      { word: "in line 1", translation: "စာကြောင်းရေ ၁ တွင် ပါရှိသော", tag: "Prepositional Phrase" },
+      {
+        word: "which means 'of or from a long time ago'",
+        translation: "ရှေးကျသော ခေတ်ကာလမှ ဟု အဓိပ္ပာယ်ရသည့်",
+        tag: "Relative Clause",
+      },
+      { word: "is", translation: "ဖြစ်သည်", tag: "Linking Verb" },
+      { word: "______", translation: "__________", tag: "Complement" },
+    ],
+  },
+  2: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "Another name", translation: "နောက်ထပ် အမည်တစ်ခုသည်", tag: "Noun Subject" },
+      { word: "for the early Stone Age", translation: "ကျောက်ခေတ်ဦးအတွက်", tag: "Prepositional Phrase" },
+      { word: "is", translation: "ဖြစ်သည်", tag: "Linking Verb" },
+      { word: "______", translation: "__________", tag: "Complement" },
+    ],
+  },
+  3: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "______ painting", translation: "__________ ပန်းချီသည်", tag: "Noun Subject" },
+      { word: "uses", translation: "အသုံးပြုသည်", tag: "Main Verb" },
+      { word: "colours", translation: "အရောင်များကို", tag: "Noun Object" },
+      {
+        word: "made from pigments with water, egg yolk and glue",
+        translation: "ရေ၊ ကြက်ဥအနှစ်နှင့် ကော်တို့ဖြင့် ရောစပ်ထားသော အရောင်ခြယ်ပစ္စည်းများမှ ပြုလုပ်ထားသော",
+        tag: "Adjective Phrase",
+      },
+    ],
+  },
+  4: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "Paintings", translation: "ပန်းချီများသည်", tag: "Noun Subject" },
+      {
+        word: "on the dry plaster of walls",
+        translation: "နံရံများ၏ ခြောက်သွေ့သော အင်္ဂတေသားပေါ်တွင် ရေးဆွဲထားသော",
+        tag: "Prepositional Phrase",
+      },
+      { word: "are", translation: "ဖြစ်ကြသည်", tag: "Linking Verb" },
+      { word: "______", translation: "__________", tag: "Complement" },
+    ],
+  },
+  5: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "The word 'do'", translation: "ကိုးကားထားသော စကားလုံးသည်", tag: "Noun Subject" },
+      { word: "in line 18", translation: "စာကြောင်းရေ ၁၈ တွင် ပါရှိသော", tag: "Prepositional Phrase" },
+      { word: "refers to", translation: "ရည်ညွှန်းသည်", tag: "Main Verb" },
+      { word: "______", translation: "__________ ကို", tag: "Noun Object" },
+    ],
+  },
+  6: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "Most paintings", translation: "ပန်းချီအများစုသည်", tag: "Noun Subject" },
+      {
+        word: "that can be ______ on the structures around pagodas",
+        translation: "စေတီပုထိုးများ ပတ်ဝန်းကျင်ရှိ အဆောက်အအုံများပေါ်တွင် __________ နိုင်သော",
+        tag: "Relative Clause",
+      },
+      { word: "are", translation: "ဖြစ်ကြသည်", tag: "Linking Verb" },
+      { word: "murals", translation: "နံရံဆေးရေး ပန်းချီများ", tag: "Complement" },
+    ],
+  },
+  7: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "______", translation: "__________ သည်", tag: "Noun Subject" },
+      { word: "uses", translation: "အသုံးပြုသည်", tag: "Main Verb" },
+      {
+        word: "geometric forms and shapes",
+        translation: "ဂျီသြမေတြီ ပုံစံများနှင့် ပုံသဏ္ဍာန်များကို",
+        tag: "Noun Object",
+      },
+    ],
+  },
+  8: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "The phrase 'these two styles'", translation: "ကိုးကားထားသော စကားစုသည်", tag: "Noun Subject" },
+      { word: "in line 29", translation: "စာကြောင်းရေ ၂၉ တွင် ပါရှိသော", tag: "Prepositional Phrase" },
+      { word: "refers to", translation: "ရည်ညွှန်းသည်", tag: "Main Verb" },
+      { word: "______", translation: "__________ ကို", tag: "Noun Object" },
+    ],
+  },
+  9: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "Graffiti artists", translation: "နံရံဆေးခြယ် အနုပညာရှင်များသည်", tag: "Noun Subject" },
+      { word: "______ or draw", translation: "__________ သို့မဟုတ် ရေးဆွဲကြသည်", tag: "Main Verb" },
+      {
+        word: "on walls or other surfaces",
+        translation: "နံရံများ သို့မဟုတ် အခြားမျက်နှာပြင်များပေါ်တွင်",
+        tag: "Prepositional Phrase",
+      },
+    ],
+  },
+  10: {
+    introMy: SV_INTRO4,
+    noteMy: SV_NOTE4,
+    cars: [
+      { word: "We", translation: "ကျွန်ုပ်တို့သည်", tag: "Noun Subject" },
+      { word: "can", translation: "—", tag: "Helping Verb" },
+      { word: "______", translation: "__________ နိုင်သည်", tag: "Main Verb" },
+      { word: "graffiti art", translation: "နံရံဆေးခြယ် အနုပညာကို", tag: "Noun Object" },
+      {
+        word: "within public view",
+        translation: "အများပြည်သူ မြင်တွေ့နိုင်သည့် နေရာများတွင်",
+        tag: "Prepositional Phrase",
+      },
+      { word: "all over the world today", translation: "ယနေ့ ကမ္ဘာတစ်ဝှမ်းလုံး၌", tag: "Adverb" },
+    ],
+  },
+};
+
+export const partB4A_breakdowns: Record<number, SentenceBreakdown> = {
+  1: {
+    introMy: WH_INTRO4,
+    noteMy: WH_NOTE4,
+    cars: [
+      { word: "Where", translation: "မည်သည့်နေရာတွင်", tag: "WH-Question Word" },
+      { word: "were", translation: "—", tag: "Helping Verb" },
+      { word: "the first paintings", translation: "ပထမဆုံး ပန်းချီများကို", tag: "Noun Subject" },
+      { word: "found", translation: "တွေ့ရှိခဲ့သနည်း", tag: "Main Verb" },
+    ],
+  },
+  2: {
+    introMy: WH_INTRO4,
+    noteMy: WH_NOTE4,
+    cars: [
+      { word: "What", translation: "မည်သည့်အရာဖြင့်", tag: "WH-Question Word" },
+      { word: "were", translation: "—", tag: "Helping Verb" },
+      {
+        word: "the tools and weapons of people in the early Stone Age",
+        translation: "ကျောက်ခေတ်ဦးက လူတို့၏ ကိရိယာများနှင့် လက်နက်များကို",
+        tag: "Noun Subject",
+      },
+      { word: "made of", translation: "ပြုလုပ်ခဲ့သနည်း", tag: "Main Verb" },
+    ],
+  },
+  3: {
+    introMy: WH_INTRO4,
+    noteMy: WH_NOTE4,
+    cars: [
+      { word: "What", translation: "အဘယ်အတွက်", tag: "WH-Question Word" },
+      { word: "do", translation: "—", tag: "Helping Verb" },
+      { word: "most painters", translation: "ပန်းချီဆရာ အများစုသည်", tag: "Noun Subject" },
+      { word: "paint for", translation: "ပန်းချီ ရေးဆွဲကြသနည်း", tag: "Main Verb" },
+    ],
+  },
+  4: {
+    introMy: WH_INTRO4,
+    noteMy: WH_NOTE4,
+    cars: [
+      { word: "What", translation: "အဘယ်အရာကို", tag: "WH-Question Word" },
+      { word: "do", translation: "—", tag: "Helping Verb" },
+      {
+        word: "most mural paintings",
+        translation: "နံရံဆေးရေး ပန်းချီအများစုသည်",
+        tag: "Noun Subject",
+      },
+      {
+        word: "on the structures around pagodas",
+        translation: "စေတီပုထိုးများ ပတ်ဝန်းကျင်ရှိ အဆောက်အအုံများပေါ်တွင်",
+        tag: "Prepositional Phrase",
+      },
+      { word: "depict", translation: "သရုပ်ဖော်သနည်း", tag: "Main Verb" },
+    ],
+  },
+  5: {
+    introMy: WH_INTRO4,
+    noteMy: WH_NOTE4,
+    cars: [
+      { word: "How", translation: "မည်သို့", tag: "WH-Question Word" },
+      { word: "are", translation: "—", tag: "Helping Verb" },
+      {
+        word: "geometric forms and shapes",
+        translation: "ဂျီသြမေတြီ ပုံစံများနှင့် ပုံသဏ္ဍာန်များကို",
+        tag: "Noun Subject",
+      },
+      { word: "in cubism", translation: "ကုဗဝါဒ ပန်းချီတွင်", tag: "Prepositional Phrase" },
+      { word: "painted", translation: "ရေးဆွဲသနည်း", tag: "Main Verb" },
+    ],
+  },
+  6: {
+    introMy: WH_INTRO4,
+    noteMy: WH_NOTE4,
+    cars: [
+      {
+        word: "What kind of artistic expression",
+        translation: "မည်သည့် အနုပညာ ဖော်ပြမှု အမျိုးအစား",
+        tag: "WH-Question Word",
+      },
+      { word: "is", translation: "ဖြစ်သနည်း", tag: "Linking Verb" },
+      { word: "graffiti", translation: "နံရံဆေးခြယ် အနုပညာသည်", tag: "Noun Subject" },
+    ],
+  },
+  7: {
+    introMy: WH_INTRO4,
+    noteMy: WH_NOTE4,
+    cars: [
+      { word: "Where", translation: "မည်သည့်နေရာများတွင်", tag: "WH-Question Word" },
+      { word: "can", translation: "—", tag: "Helping Verb" },
+      { word: "graffiti", translation: "နံရံဆေးခြယ် အနုပညာကို", tag: "Noun Subject" },
+      { word: "be seen", translation: "မြင်တွေ့နိုင်သနည်း", tag: "Main Verb" },
+    ],
+  },
+  8: {
+    introMy: WH_INTRO4,
+    noteMy: WH_NOTE4,
+    cars: [
+      { word: "Do", translation: "—", tag: "Helping Verb" },
+      { word: "you", translation: "သင်သည်", tag: "Noun Subject" },
+      { word: "like", translation: "နှစ်သက်ပါသလား", tag: "Main Verb" },
+      { word: "paintings", translation: "ပန်းချီများကို", tag: "Noun Object" },
+      {
+        word: "that capture the beauty of nature",
+        translation: "သဘာဝတရား၏ အလှကို ဖမ်းယူထားသော",
+        tag: "Relative Clause",
+      },
+      { word: "or portraits", translation: "သို့မဟုတ် ပုံတူပန်းချီများကို", tag: "Noun Object" },
+      { word: "Why", translation: "အဘယ်ကြောင့်နည်း", tag: "WH-Question Word" },
+    ],
+  },
+  9: {
+    introMy: WH_INTRO4,
+    noteMy: WH_NOTE4,
+    cars: [
+      { word: "Should", translation: "—", tag: "Helping Verb" },
+      { word: "graffiti artists", translation: "နံရံဆေးခြယ် အနုပညာရှင်များအား", tag: "Noun Subject" },
+      { word: "be allowed", translation: "ခွင့်ပြုသင့်ပါသလား", tag: "Main Verb" },
+      { word: "to write or draw", translation: "ရေးသားရန် သို့မဟုတ် ရေးဆွဲရန်", tag: "Purpose Clause" },
+      {
+        word: "on walls or surfaces within public view",
+        translation: "အများပြည်သူ မြင်တွေ့နိုင်သော နံရံများ သို့မဟုတ် မျက်နှာပြင်များပေါ်တွင်",
+        tag: "Prepositional Phrase",
+      },
+      {
+        word: "Why or why not",
+        translation: "အဘယ်ကြောင့်နည်း၊ သို့မဟုတ် အဘယ်ကြောင့် မဟုတ်သနည်း",
+        tag: "WH-Question Word",
+      },
+    ],
+  },
+};
+
 /* ---------------------------- 4B Vocabulary ---------------------------- */
+
 
 export const partA4B_translations: Record<number, string> = {
   1: "ဤပန်းချီသည် ပျော်ရွှင်မှု ခံစားချက်တစ်ခုကို __________ သည်။ / အဆိုပါ ပန်းချီသည် Cinderella ကို ပန်းရောင် ၀တ်စုံဖြင့် __________ သည်။",
