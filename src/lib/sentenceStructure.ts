@@ -330,6 +330,11 @@ const WORD_MY: Record<string, string> = {
   go: "သွား", come: "လာ", make: "လုပ်", take: "ယူ", give: "ပေး", see: "မြင်",
   say: "ပြော", get: "ရ", know: "သိ", think: "ထင်", want: "လို", like: "ကြိုက်",
   live: "နေ", work: "လုပ်ငန်း", speak: "ပြော", read: "ဖတ်", write: "ရေး", listen: "နားထောင်",
+  // ---- Unit 2 (Literature) reading exercises ----
+  there: "အဲဒီမှာ", line: "စာကြောင်း", lines: "စာကြောင်းများ",
+  sonnet: "ဆွန်နက် ကဗျာ", limerick: "လင်မရစ် ကဗျာ", tragicomedy: "နှစ်မျိုးရောနှောဇာတ်",
+  classics: "ဂန္တဝင် စာပေများ", difference: "ကွာခြားချက်", between: "အကြားရှိ",
+  painter: "ပန်းချီဆရာ", writer: "စာရေးဆရာ", comedy: "ဟာသဇာတ်", tragedy: "ဝမ်းနည်းဖွယ်ဇာတ်",
 };
 
 export function translateChunkMy(chunk: string): string {
