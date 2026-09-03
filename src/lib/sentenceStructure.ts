@@ -303,7 +303,11 @@ const PHRASE_MY: Record<string, string> = {
   "in english": "အင်္ဂလိပ်လို",
   // Add this exact block below for the dynamic question phrase:
   "to learn any other foreign language apart from English? Why": "သို့မဟုတ် အင်္ဂလိပ်ဘာသာစကားမှလွဲ၍ အခြားနိုင်ငံခြားဘာသာစကားကို သင်ယူလိုပါသလား။ ဘာကြောင့်လဲ။",
-  "to learn any other foreign language apart from english why": "သို့မဟုတ် အင်္ဂလိပ်ဘာသာစကားမှလွဲ၍ အခြားနိုင်ငံခြားဘာသာစကားကို သင်ယူလိုပါသလား။ ဘာကြောင့်လဲ။"
+  "to learn any other foreign language apart from english why": "သို့မဟုတ် အင်္ဂလိပ်ဘာသာစကားမှလွဲ၍ အခြားနိုင်ငံခြားဘာသာစကားကို သင်ယူလိုပါသလား။ ဘာကြောင့်လဲ။",
+  // ---- Unit 2 (Literature) reading exercises ----
+  "the difference": "ကွာခြားချက်",
+  "between a painter and a writer": "ပန်းချီဆရာနှင့် စာရေးဆရာ အကြား",
+  "between a comedy and a tragedy": "ဟာသဇာတ်နှင့် ဝမ်းနည်းဖွယ်ဇာတ် အကြား",
 };
 
 const WORD_MY: Record<string, string> = {
