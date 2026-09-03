@@ -557,7 +557,7 @@ const SENTENCE_OVERRIDES: Record<string, Override> = {
     cars: [
       {
         word: 'The word "those" in line 3',
-        translation: "စာကြောင်းရေ ၃ တွင်ပါရှိသော “those” ဆိုသည့် စကားလုံးသည်",
+        translation: "စာကြောင်းရေ ၃ တွင်ပါရှိသော “ထိုအရာများ” ဟူသည့် စကားလုံးသည်",
         tag: "Noun Subject",
       },
       { word: "refers to", translation: "ရည်ညွှန်းသည်", tag: "Main Verb" },
@@ -573,7 +573,7 @@ const SENTENCE_OVERRIDES: Record<string, Override> = {
       {
         word: "One word in line 10 which means the same as plain, or simple,",
         translation:
-          "စာကြောင်းရေ ၁၀ တွင်ပါရှိပြီး “plain” သို့မဟုတ် “simple” နှင့် အဓိပ္ပာယ်တူသော စကားလုံးတစ်လုံးမှာ",
+          "စာကြောင်းရေ ၁၀ တွင်ပါရှိပြီး “ရိုးရှင်းသော” သို့မဟုတ် “လွယ်ကူသော” နှင့် အဓိပ္ပာယ်တူသော စကားလုံးတစ်လုံးမှာ",
         tag: "Noun Subject",
       },
       { word: "is", translation: "ဖြစ်သည်", tag: "Linking Verb" },
@@ -600,7 +600,7 @@ const SENTENCE_OVERRIDES: Record<string, Override> = {
     cars: [
       {
         word: 'The word "This" in line 18',
-        translation: "စာကြောင်းရေ ၁၈ တွင်ပါရှိသော “This” ဆိုသည့် စကားလုံးသည်",
+        translation: "စာကြောင်းရေ ၁၈ တွင်ပါရှိသော “ဤအရာ” ဟူသည့် စကားလုံးသည်",
         tag: "Noun Subject",
       },
       { word: "refers to", translation: "ရည်ညွှန်းသည်", tag: "Main Verb" },
@@ -613,7 +613,7 @@ const SENTENCE_OVERRIDES: Record<string, Override> = {
     cars: [
       {
         word: 'The word "it" in line 27',
-        translation: "စာကြောင်းရေ ၂၇ တွင်ပါရှိသော “it” ဆိုသည့် စကားလုံးသည်",
+        translation: "စာကြောင်းရေ ၂၇ တွင်ပါရှိသော “ထိုအရာ” ဟူသည့် စကားလုံးသည်",
         tag: "Noun Subject",
       },
       { word: "refers to", translation: "ရည်ညွှန်းသည်", tag: "Main Verb" },
