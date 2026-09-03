@@ -303,7 +303,11 @@ const PHRASE_MY: Record<string, string> = {
   "in english": "အင်္ဂလိပ်လို",
   // Add this exact block below for the dynamic question phrase:
   "to learn any other foreign language apart from English? Why": "သို့မဟုတ် အင်္ဂလိပ်ဘာသာစကားမှလွဲ၍ အခြားနိုင်ငံခြားဘာသာစကားကို သင်ယူလိုပါသလား။ ဘာကြောင့်လဲ။",
-  "to learn any other foreign language apart from english why": "သို့မဟုတ် အင်္ဂလိပ်ဘာသာစကားမှလွဲ၍ အခြားနိုင်ငံခြားဘာသာစကားကို သင်ယူလိုပါသလား။ ဘာကြောင့်လဲ။"
+  "to learn any other foreign language apart from english why": "သို့မဟုတ် အင်္ဂလိပ်ဘာသာစကားမှလွဲ၍ အခြားနိုင်ငံခြားဘာသာစကားကို သင်ယူလိုပါသလား။ ဘာကြောင့်လဲ။",
+  // ---- Unit 2 (Literature) reading exercises ----
+  "the difference": "ကွာခြားချက်",
+  "between a painter and a writer": "ပန်းချီဆရာနှင့် စာရေးဆရာ အကြား",
+  "between a comedy and a tragedy": "ဟာသဇာတ်နှင့် ဝမ်းနည်းဖွယ်ဇာတ် အကြား",
 };
 
 const WORD_MY: Record<string, string> = {
@@ -326,6 +330,11 @@ const WORD_MY: Record<string, string> = {
   go: "သွား", come: "လာ", make: "လုပ်", take: "ယူ", give: "ပေး", see: "မြင်",
   say: "ပြော", get: "ရ", know: "သိ", think: "ထင်", want: "လို", like: "ကြိုက်",
   live: "နေ", work: "လုပ်ငန်း", speak: "ပြော", read: "ဖတ်", write: "ရေး", listen: "နားထောင်",
+  // ---- Unit 2 (Literature) reading exercises ----
+  there: "အဲဒီမှာ", line: "စာကြောင်း", lines: "စာကြောင်းများ",
+  sonnet: "ဆွန်နက် ကဗျာ", limerick: "လင်မရစ် ကဗျာ", tragicomedy: "နှစ်မျိုးရောနှောဇာတ်",
+  classics: "ဂန္တဝင် စာပေများ", difference: "ကွာခြားချက်", between: "အကြားရှိ",
+  painter: "ပန်းချီဆရာ", writer: "စာရေးဆရာ", comedy: "ဟာသဇာတ်", tragedy: "ဝမ်းနည်းဖွယ်ဇာတ်",
 };
 
 export function translateChunkMy(chunk: string): string {
@@ -407,6 +416,139 @@ const SENTENCE_OVERRIDES: Record<string, Override> = {
       "ဒါက Subject → Verb → Object ပုံစံ ပြောကြားချက် ဝါကျပါ။ \"begins to speak\" သည် ပေါင်းစပ်ကြိယာဖြစ်ပြီး \"begins\" သာ Main Verb ဖြစ်သည်။",
     noteMy:
       "ပုံစံ: ကံတ္တား (Subject) → ကြိယာ (Verb \"begins\") → ကံ (Object) ။ \"to\" ကို တစ်ခုတည်း Main Verb အဖြစ် မထုတ်ပါ။",
+  },
+
+  /* -------------------- Unit 2 (Literature) reading -------------------- */
+
+  "a painter uses colours. a writer uses _": {
+    cars: [
+      { word: "A painter uses colours.", translation: "ပန်းချီဆရာတစ်ဦးသည် အရောင်များကို အသုံးပြုသည်။", tag: "Sentence" },
+      { word: "A writer", translation: "စာရေးဆရာတစ်ဦးသည်", tag: "Noun Subject" },
+      { word: "uses", translation: "အသုံးပြုသည်", tag: "Main Verb" },
+      { word: "_______", translation: "_______", tag: "Noun Object" },
+    ],
+    introMy: "ဒါက ဝါကျနှစ်ခုပါတဲ့ ဖြည့်စွက်ရမယ့် စာကြောင်းပါ။ ပထမဝါကျက နမူနာဖြစ်ပြီး ဒုတိယဝါကျရဲ့ ကံ (Object) နေရာကို ဖြည့်ရမှာပါ။",
+    noteMy: "ပုံစံ: ကံတ္တား (A writer) → ကြိယာ (uses) → ကံ (______) ။ ပထမဝါကျက \"painter ↔ writer\" နှိုင်းယှဉ်ချက်ကို ပြထားတာပါ။",
+  },
+  "the three subjects under literature are: _": {
+    cars: [
+      { word: "The three subjects under literature", translation: "စာပေ၏အောက်ရှိ အခန်းကဏ္ဍ သုံးခုမှာ", tag: "Noun Subject" },
+      { word: "are", translation: "ဖြစ်ကြသည်", tag: "Linking Verb" },
+      { word: "_______", translation: "_______", tag: "Complement" },
+    ],
+    introMy: "ဒါက be-ကြိယာသုံး ပြောကြားချက် ဝါကျပါ။ \"under literature\" သည် ဝိဘတ်စကားစုဖြစ်ပြီး ကံတ္တားထဲမှာ ပါဝင်နေပါတယ်။",
+    noteMy: "ပုံစံ: ကံတ္တား (The three subjects under literature) → be-ကြိယာ (are) → ဖြည့်စွက်စာ (______) ။",
+  },
+  "the author or writer of pride and prejudice was _": {
+    cars: [
+      { word: "The author or writer of Pride and Prejudice", translation: "Pride and Prejudice ၏ စာရေးဆရာ (သို့မဟုတ်) ရေးသားသူမှာ", tag: "Noun Subject" },
+      { word: "was", translation: "ဖြစ်ခဲ့သည်", tag: "Linking Verb" },
+      { word: "_______", translation: "_______", tag: "Complement" },
+    ],
+    introMy: "ဒါက be-ကြိယာသုံး ပြောကြားချက် ဝါကျပါ။ \"of Pride and Prejudice\" သည် \"author\" ကို ဖော်ပြတဲ့ ဝိဘတ်စကားစုပါ။",
+    noteMy: "ပုံစံ: ကံတ္တား → be-ကြိယာ (was) → ဖြည့်စွက်စာ (______) ။ \"Pride and Prejudice\" သည် ဝတ္ထုခေါင်းစဉ်ဖြစ်လို့ ဘာသာမပြန်ပါ။",
+  },
+  "for whom the bell tolls was written by _": {
+    cars: [
+      { word: "For Whom the Bell Tolls", translation: "For Whom the Bell Tolls (ဝတ္ထုခေါင်းစဉ်) သည်", tag: "Noun Subject" },
+      { word: "was written", translation: "ရေးသားခံခဲ့ရသည် (passive)", tag: "Main Verb" },
+      { word: "by _______", translation: "______ က", tag: "Prepositional Phrase" },
+    ],
+    introMy: "ဒါက passive voice (ကံပြုပုံစံ) ဝါကျပါ။ \"by ______\" က လုပ်ဆောင်သူ (agent) ကို ပြပါတယ်။",
+    noteMy: "ပုံစံ: ကံ (ဝတ္ထုခေါင်းစဉ်) → passive ကြိယာ (was written) → by + လုပ်ဆောင်သူ ။",
+  },
+  "the three kinds of drama are: _": {
+    cars: [
+      { word: "The three kinds of drama", translation: "ပြဇာတ် အမျိုးအစား သုံးမျိုးမှာ", tag: "Noun Subject" },
+      { word: "are", translation: "ဖြစ်ကြသည်", tag: "Linking Verb" },
+      { word: "_______", translation: "_______", tag: "Complement" },
+    ],
+    introMy: "ဒါက be-ကြိယာသုံး ပြောကြားချက် ဝါကျပါ။ \"of drama\" သည် \"kinds\" ကို ဖော်ပြတဲ့ ဝိဘတ်စကားစုပါ။",
+    noteMy: "ပုံစံ: ကံတ္တား (The three kinds of drama) → be-ကြိယာ (are) → ဖြည့်စွက်စာ (______) ။",
+  },
+  "a play that has a sad ending is a _": {
+    cars: [
+      { word: "A play that has a sad ending", translation: "ဝမ်းနည်းဖွယ် အဆုံးသတ်ရှိသော ပြဇာတ်တစ်ပုဒ်သည်", tag: "Noun Subject" },
+      { word: "is", translation: "ဖြစ်သည်", tag: "Linking Verb" },
+      { word: "a _______", translation: "______ တစ်မျိုး", tag: "Complement" },
+    ],
+    introMy: "\"that has a sad ending\" သည် \"play\" ကို ပြန်ဖော်ပြတဲ့ relative clause (ဆက်စပ်အခန်း) ဖြစ်ပြီး ကံတ္တားထဲမှာ ပါဝင်နေပါတယ်။",
+    noteMy: "ပုံစံ: ကံတ္တား (A play + that has a sad ending) → be-ကြိယာ (is) → ဖြည့်စွက်စာ (a ______) ။",
+  },
+  "yatu., yagan, aye-gyin:, and baw-lai are different kinds of myanmar _": {
+    cars: [
+      { word: "Yatu., yagan, aye-gyin:, and baw-lai", translation: "ရတု၊ ရကန်၊ အေးချင်း နှင့် ဘောလယ် တို့သည်", tag: "Noun Subject" },
+      { word: "are", translation: "ဖြစ်ကြသည်", tag: "Linking Verb" },
+      { word: "different kinds of Myanmar _______", translation: "မြန်မာ ______ ၏ မတူညီသော အမျိုးအစားများ", tag: "Complement" },
+    ],
+    introMy: "\"Yatu, yagan, aye-gyin, baw-lai\" တို့သည် မြန်မာရိုးရာ ကဗျာအမျိုးအစားများ ဖြစ်ပြီး အဲဒါတွေအကုန်လုံးက ကံတ္တားပါ။",
+    noteMy: "ပုံစံ: ကံတ္တား (ကဗျာအမည် လေးမျိုး) → be-ကြိယာ (are) → ဖြည့်စွက်စာ ။",
+  },
+  "who wrote wuthering heights": {
+    cars: [
+      { word: "Who", translation: "ဘယ်သူ", tag: "WH-Question Word" },
+      { word: "wrote", translation: "ရေးသားခဲ့သနည်း", tag: "Main Verb" },
+      { word: "Wuthering Heights", translation: "Wuthering Heights (ဝတ္ထုခေါင်းစဉ်) ကို", tag: "Noun Object" },
+    ],
+    introMy: "\"Who\" က ဒီမှာ ကံတ္တားအဖြစ် သုံးထားလို့ \"do/does/did\" လို အကူကြိယာ မလိုအပ်ပါဘူး။",
+    noteMy: "ပုံစံ: Who (ကံတ္တား) → ကြိယာ (wrote) → ကံ (Wuthering Heights) ။",
+  },
+  "who wrote the play as you like it": {
+    cars: [
+      { word: "Who", translation: "ဘယ်သူ", tag: "WH-Question Word" },
+      { word: "wrote", translation: "ရေးသားခဲ့သနည်း", tag: "Main Verb" },
+      { word: "the play As You Like It", translation: "As You Like It ပြဇာတ်ကို", tag: "Noun Object" },
+    ],
+    introMy: "\"As You Like It\" သည် ပြဇာတ်ခေါင်းစဉ်ဖြစ်လို့ တစ်လုံးချင်း ဘာသာမပြန်ရပါ — တစ်ခုလုံးကို ခေါင်းစဉ်အဖြစ် ကိုင်တွယ်ပါ။",
+    noteMy: "ပုံစံ: Who (ကံတ္တား) → ကြိယာ (wrote) → ကံ (the play As You Like It) ။",
+  },
+  "can a news article be regarded as literature? why": {
+    cars: [
+      { word: "Can", translation: "…နိုင်ပါသလား", tag: "Helping Verb" },
+      { word: "a news article", translation: "သတင်းဆောင်းပါးတစ်ပုဒ်ကို", tag: "Noun Subject" },
+      { word: "be regarded as literature", translation: "စာပေအဖြစ် သတ်မှတ်ခံရ", tag: "Predicate" },
+      { word: "Why?", translation: "အဘယ်ကြောင့်နည်း", tag: "WH-Question Word" },
+    ],
+    introMy: "မေးခွန်းနှစ်ခု တွဲထားပါတယ် — ပထမတစ်ခုက passive ပုံစံ \"be regarded as\" သုံး ဟုတ်/မဟုတ် မေးခွန်း၊ ဒုတိယတစ်ခုက \"Why\" အကြောင်းရင်း မေးခွန်းပါ။",
+    noteMy: "ပုံစံ: အကူကြိယာ (Can) → ကံတ္တား → ကြိယာပိုင်း (be regarded as …) + Why? ။ \"be regarded as\" = …အဖြစ် သတ်မှတ်ခံရသည်။",
+  },
+  "when can a piece of writing be recognized as literature": {
+    cars: [
+      { word: "When", translation: "ဘယ်အချိန်တွင်", tag: "WH-Question Word" },
+      { word: "can", translation: "နိုင်", tag: "Helping Verb" },
+      { word: "a piece of writing", translation: "အရေးအသားတစ်ခုကို", tag: "Noun Subject" },
+      { word: "be recognized as literature", translation: "စာပေအဖြစ် အသိအမှတ်ပြုခံရ", tag: "Predicate" },
+    ],
+    introMy: "\"be recognized as\" သည် passive ကြိယာဖြစ်ပြီး \"…အဖြစ် အသိအမှတ်ပြုခံရသည်\" ဟု အဓိပ္ပာယ်ရပါတယ်။",
+    noteMy: "ပုံစံ: WH-word (When) → အကူကြိယာ (can) → ကံတ္တား → passive ကြိယာပိုင်း (be recognized as …) ။",
+  },
+  "what is drama meant for": {
+    cars: [
+      { word: "What … for", translation: "ဘာအတွက် … လဲ", tag: "WH-Question Word" },
+      { word: "is drama meant", translation: "ပြဇာတ်ကို ရည်ရွယ် ရေးသားခြင်း ဖြစ်သနည်း", tag: "Predicate" },
+    ],
+    introMy: "\"What is … meant for?\" ဆိုတာက \"… ကို ဘာအတွက် ရည်ရွယ်တာလဲ\" လို့ မေးတဲ့ ပုံစံပါ။ \"for\" က \"What\" နဲ့ တွဲလုပ်နေတာပါ။",
+    noteMy: "ပုံစံ: What … for + be-ကြိယာ + ကံတ္တား + meant ။ \"be meant for\" = ရည်ရွယ်ထားခြင်း ဖြစ်သည်။",
+  },
+  "which do you like: comedy, tragedy or tragicomedy? explain why you like it": {
+    cars: [
+      { word: "Which", translation: "ဘယ်တစ်ခုကို", tag: "WH-Question Word" },
+      { word: "do you like", translation: "သင်ှစ်သက်သနည်း", tag: "Main Verb" },
+      { word: "comedy, tragedy or tragicomedy", translation: "ဟာသဇာတ်၊ ဝမ်းနည်းဖွယ်ဇာတ် သို့မဟုတ် နှစ်မျိုးရောနှောဇာတ်", tag: "Noun Object" },
+      { word: "Explain why you like it", translation: "သင် နှစ်သက်ရသည့် အကြောင်းရင်းကို ရှင်းပြပါ", tag: "Sentence" },
+    ],
+    introMy: "ဝါကျနှစ်ခုပါဝင်ပါတယ် — ပထမတစ်ခုက ရွေးချယ်ခိုင်း မေးခွန်း (Which do you like …)၊ ဒုတိယတစ်ခုက ရှင်းပြခိုင်းတဲ့ command ဝါကျ (Explain …) ပါ။",
+    noteMy: "ပုံစံ: Which → အကူကြိယာ (do) → ကံတ္တား (you) → ကြိယာ (like) → ရွေးစရာများ ။",
+  },
+  "do you wish to be a famous author? why or why not": {
+    cars: [
+      { word: "Do", translation: "…ပါသလား", tag: "Helping Verb" },
+      { word: "you", translation: "သင်", tag: "Noun Subject" },
+      { word: "wish to be a famous author", translation: "နာမည်ကျော် စာရေးဆရာတစ်ဦး ဖြစ်လိုသည်", tag: "Predicate" },
+      { word: "Why or why not?", translation: "ဘာကြောင့် ဖြစ်လို (သို့မဟုတ်) မဖြစ်လိုသနည်း", tag: "WH-Question Word" },
+    ],
+    introMy: "ဟုတ်/မဟုတ် မေးခွန်း (Do you wish …) နဲ့ အကြောင်းရင်း မေးခွန်း (Why or why not?) တွဲထားပါတယ်။",
+    noteMy: "ပုံစံ: အကူကြိယာ (Do) → ကံတ္တား (you) → ကြိယာပိုင်း (wish to be …) ။ \"wish to be\" = …ဖြစ်လိုသည်။",
   },
 };
 
