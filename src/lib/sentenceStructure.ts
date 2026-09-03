@@ -550,6 +550,217 @@ const SENTENCE_OVERRIDES: Record<string, Override> = {
     introMy: "ဟုတ်/မဟုတ် မေးခွန်း (Do you wish …) နဲ့ အကြောင်းရင်း မေးခွန်း (Why or why not?) တွဲထားပါတယ်။",
     noteMy: "ပုံစံ: အကူကြိယာ (Do) → ကံတ္တား (you) → ကြိယာပိုင်း (wish to be …) ။ \"wish to be\" = …ဖြစ်လိုသည်။",
   },
+
+  /* ---------------------- Unit 3 (Zero) reading — Part A ---------------------- */
+
+  'the word "those" in line 3 refers to _': {
+    cars: [
+      {
+        word: 'The word "those" in line 3',
+        translation: "စာကြောင်းရေ ၃ တွင်ပါရှိသော “ထိုအရာများ” ဟူသည့် စကားလုံးသည်",
+        tag: "Noun Subject",
+      },
+      { word: "refers to", translation: "ရည်ညွှန်းသည်", tag: "Main Verb" },
+      { word: "________", translation: "________", tag: "Complement" },
+    ],
+    introMy:
+      "ဒါက ကတ္တား → ကြိယာ → ဖြည့်စွက်စာ ပုံစံ ဖြည့်စွက်ရမည့် ဝါကျပါ။ “in line 3” သည် ကတ္တားကို ဖော်ပြပေးသည့် စကားစုဖြစ်ပြီး ကတ္တားအတွင်း ပါဝင်နေပါတယ်။",
+    noteMy:
+      "ပုံစံ: ကတ္တား (စကားလုံးအမည်နှင့် စာကြောင်းအမှတ်) → ကြိယာ (refers to) → ဖြည့်စွက်စာ ။ ဝိဘတ်ကို တစ်လုံးတည်း ခွဲမထုတ်ပါ။",
+  },
+  "one word in line 10 which means the same as plain, or simple, is _": {
+    cars: [
+      {
+        word: "One word in line 10 which means the same as plain, or simple,",
+        translation:
+          "စာကြောင်းရေ ၁၀ တွင်ပါရှိပြီး “ရိုးရှင်းသော” သို့မဟုတ် “လွယ်ကူသော” နှင့် အဓိပ္ပာယ်တူသော စကားလုံးတစ်လုံးမှာ",
+        tag: "Noun Subject",
+      },
+      { word: "is", translation: "ဖြစ်သည်", tag: "Linking Verb" },
+      { word: "________", translation: "________", tag: "Complement" },
+    ],
+    introMy:
+      "“which means the same as …” သည် “one word” ကို ပြန်ဖော်ပြသည့် ဆက်စပ်အခန်း (relative clause) ဖြစ်ပြီး ကတ္တားအတွင်းသာ ပါဝင်သည်။ အဓိကကြိယာမှာ “is” သာ ဖြစ်ပါတယ်။",
+    noteMy: "ပုံစံ: ကတ္တား (စကားလုံး + ဆက်စပ်အခန်း) → be-ကြိယာ (is) → ဖြည့်စွက်စာ ။",
+  },
+  "the two kinds of numerals are _": {
+    cars: [
+      {
+        word: "The two kinds of numerals",
+        translation: "ဂဏန်းအမျိုးအစား နှစ်မျိုးမှာ",
+        tag: "Noun Subject",
+      },
+      { word: "are", translation: "ဖြစ်ကြသည်", tag: "Linking Verb" },
+      { word: "________", translation: "________", tag: "Complement" },
+    ],
+    introMy: "ဒါက be-ကြိယာသုံး ပြောကြားချက် ဝါကျပါ။ “of numerals” သည် “kinds” ကို ဖော်ပြသည့် စကားစုဖြစ်ပြီး ကတ္တားအတွင်း ပါဝင်သည်။",
+    noteMy: "ပုံစံ: ကတ္တား (ဂဏန်းအမျိုးအစား နှစ်မျိုး) → be-ကြိယာ (are) → ဖြည့်စွက်စာ ။",
+  },
+  'the word "this" in line 18 refers to _': {
+    cars: [
+      {
+        word: 'The word "This" in line 18',
+        translation: "စာကြောင်းရေ ၁၈ တွင်ပါရှိသော “ဤအရာ” ဟူသည့် စကားလုံးသည်",
+        tag: "Noun Subject",
+      },
+      { word: "refers to", translation: "ရည်ညွှန်းသည်", tag: "Main Verb" },
+      { word: "________", translation: "________", tag: "Complement" },
+    ],
+    introMy: "ဒါက ကတ္တား → ကြိယာ → ဖြည့်စွက်စာ ပုံစံ ဝါကျပါ။ အဓိကကြိယာမှာ “refers to” ဖြစ်သည်။",
+    noteMy: "ပုံစံ: ကတ္တား → ကြိယာ (refers to) → ဖြည့်စွက်စာ ။ စာကြောင်းအမှတ်ကို ကတ္တားနှင့် တွဲဖတ်ပါ။",
+  },
+  'the word "it" in line 27 refers to _': {
+    cars: [
+      {
+        word: 'The word "it" in line 27',
+        translation: "စာကြောင်းရေ ၂၇ တွင်ပါရှိသော “ထိုအရာ” ဟူသည့် စကားလုံးသည်",
+        tag: "Noun Subject",
+      },
+      { word: "refers to", translation: "ရည်ညွှန်းသည်", tag: "Main Verb" },
+      { word: "________", translation: "________", tag: "Complement" },
+    ],
+    introMy: "ဒါက ကတ္တား → ကြိယာ → ဖြည့်စွက်စာ ပုံစံ ဝါကျပါ။ နာမ်စားက ဘာကို ရည်ညွှန်းသလဲ ရှာရမည်။",
+    noteMy: "ပုံစံ: ကတ္တား → ကြိယာ (refers to) → ဖြည့်စွက်စာ ။",
+  },
+  "it was the hindu mathematicians who _": {
+    cars: [
+      { word: "It was", translation: "…သာ ဖြစ်ခဲ့သည်", tag: "Linking Verb" },
+      {
+        word: "the Hindu mathematicians",
+        translation: "ဟိန္ဒူ သင်္ချာပညာရှင်များ",
+        tag: "Complement",
+      },
+      { word: "who ________", translation: "________ ခဲ့သူများမှာ", tag: "Relative Clause" },
+    ],
+    introMy:
+      "ဒါက အလေးထားပြောသည့် (cleft) ဝါကျပုံစံပါ — “It was … who …” ဖြင့် လုပ်ဆောင်သူကို ထင်ရှားစွာ ဖော်ပြပါတယ်။",
+    noteMy: "ပုံစံ: It + be-ကြိယာ (was) → အလေးထားခံ အပိုင်း → who + ကြိယာပိုင်း ။",
+  },
+  "the arabic word for zero is _": {
+    cars: [
+      {
+        word: "The Arabic word for zero",
+        translation: "သုညကို ဆိုလိုသည့် အာရေဗီ စကားလုံးမှာ",
+        tag: "Noun Subject",
+      },
+      { word: "is", translation: "ဖြစ်သည်", tag: "Linking Verb" },
+      { word: "________", translation: "________", tag: "Complement" },
+    ],
+    introMy: "“for zero” သည် စကားလုံးကို ဖော်ပြသည့် စကားစုဖြစ်ပြီး ကတ္တားအတွင်း ပါဝင်သည်။",
+    noteMy: "ပုံစံ: ကတ္တား → be-ကြိယာ (is) → ဖြည့်စွက်စာ ။",
+  },
+
+  /* ---------------------- Unit 3 (Zero) reading — Part B ---------------------- */
+
+  "what is the passage about": {
+    cars: [
+      { word: "What … about", translation: "ဘာအကြောင်း … လဲ", tag: "WH-Question Word" },
+      { word: "is", translation: "ဖြစ်သနည်း", tag: "Linking Verb" },
+      { word: "the passage", translation: "ဤစာပိုဒ်သည်", tag: "Noun Subject" },
+    ],
+    introMy:
+      "“What … about?” သည် “ဘာအကြောင်း ရေးထားတာလဲ” ဟု မေးသည့် ပုံစံပါ။ “about” က “What” နှင့် တွဲဖက်နေသဖြင့် တစ်လုံးတည်း ခွဲမထုတ်ပါ။",
+    noteMy: "ပုံစံ: What … about + be-ကြိယာ (is) + ကတ္တား (the passage) ။",
+  },
+  "what is the main difference between the two kinds of numerals": {
+    cars: [
+      { word: "What", translation: "ဘာလဲ", tag: "WH-Question Word" },
+      { word: "is", translation: "ဖြစ်သနည်း", tag: "Linking Verb" },
+      {
+        word: "the main difference between the two kinds of numerals",
+        translation: "ဂဏန်းအမျိုးအစား နှစ်မျိုးအကြား အဓိက ကွာခြားချက်မှာ",
+        tag: "Noun Subject",
+      },
+    ],
+    introMy:
+      "ဒါက be-ကြိယာသုံး WH-မေးခွန်းပါ။ “between the two kinds of numerals” သည် “difference” ကို ဖော်ပြသဖြင့် ကတ္တားနှင့် တွဲဖတ်ရသည်။",
+    noteMy: "ပုံစံ: What → be-ကြိယာ (is) → ကတ္တား (ကွာခြားချက်) ။",
+  },
+  "which of the two kinds of numerals is easy to use? why": {
+    cars: [
+      {
+        word: "Which of the two kinds of numerals",
+        translation: "ဂဏန်းအမျိုးအစား နှစ်မျိုးအနက် မည်သည့်အမျိုးအစားသည်",
+        tag: "Noun Subject",
+      },
+      { word: "is", translation: "ဖြစ်သနည်း", tag: "Linking Verb" },
+      { word: "easy to use", translation: "အသုံးပြုရ လွယ်ကူသည်", tag: "Complement" },
+      { word: "Why?", translation: "အဘယ်ကြောင့်နည်း", tag: "WH-Question Word" },
+    ],
+    introMy:
+      "မေးခွန်းနှစ်ခု တွဲထားပါတယ် — ပထမတစ်ခုက ရွေးချယ်ခိုင်းသည့် မေးခွန်း၊ ဒုတိယတစ်ခုက အကြောင်းရင်း မေးသည့် မေးခွန်းပါ။",
+    noteMy: "ပုံစံ: Which + ကတ္တား → be-ကြိယာ (is) → ဖြည့်စွက်စာ (easy to use) + Why? ။",
+  },
+  "what does the hindu word for zero mean": {
+    cars: [
+      { word: "What", translation: "ဘာကို", tag: "WH-Question Word" },
+      { word: "does", translation: "…သနည်း", tag: "Helping Verb" },
+      {
+        word: "the Hindu word for zero",
+        translation: "သုညကို ဆိုလိုသည့် ဟိန္ဒူ စကားလုံးသည်",
+        tag: "Noun Subject",
+      },
+      { word: "mean", translation: "အဓိပ္ပာယ်ရသည်", tag: "Main Verb" },
+    ],
+    introMy: "“does” သည် အကူကြိယာဖြစ်ပြီး အဓိကကြိယာမှာ “mean” ဖြစ်သည်။",
+    noteMy: "ပုံစံ: What → အကူကြိယာ (does) → ကတ္တား → အဓိကကြိယာ (mean) ။",
+  },
+  'what does "0" represent in scales and coordinate axes': {
+    cars: [
+      { word: "What", translation: "ဘာကို", tag: "WH-Question Word" },
+      { word: "does", translation: "…သနည်း", tag: "Helping Verb" },
+      { word: '"0"', translation: "“၀” သည်", tag: "Noun Subject" },
+      { word: "represent", translation: "ကိုယ်စားပြုသည်", tag: "Main Verb" },
+      {
+        word: "in scales and coordinate axes",
+        translation: "အတိုင်းအတာ စကေးများနှင့် ဝင်ရိုးများပေါ်တွင်",
+        tag: "Prepositional Phrase",
+      },
+    ],
+    introMy:
+      "အဓိကကြိယာမှာ “represent” ဖြစ်သည်။ “in” သည် ဝိဘတ်သာဖြစ်ပြီး ကြိယာ မဟုတ်ပါ — နောက်ရှိ စကားစုနှင့် တွဲဖတ်ရသည်။",
+    noteMy: "ပုံစံ: What → အကူကြိယာ (does) → ကတ္တား → အဓိကကြိယာ (represent) → ဝိဘတ်စကားစု ။",
+  },
+  "when did the hindu mathematicians discover zero": {
+    cars: [
+      { word: "When", translation: "ဘယ်အချိန်တွင်", tag: "WH-Question Word" },
+      { word: "did", translation: "…ခဲ့သနည်း", tag: "Helping Verb" },
+      {
+        word: "the Hindu mathematicians",
+        translation: "ဟိန္ဒူ သင်္ချာပညာရှင်များသည်",
+        tag: "Noun Subject",
+      },
+      { word: "discover", translation: "ရှာဖွေတွေ့ရှိသည်", tag: "Main Verb" },
+      { word: "zero", translation: "သုညကို", tag: "Noun Object" },
+    ],
+    introMy: "အကူကြိယာ “did” ရှိသဖြင့် အဓိကကြိယာကို အခြေပုံစံ (discover) အတိုင်း ရေးရသည်။",
+    noteMy: "ပုံစံ: When → အကူကြိယာ (did) → ကတ္တား → အဓိကကြိယာ (discover) → ကံ (zero) ။",
+  },
+  "what is the other english word for zero": {
+    cars: [
+      { word: "What", translation: "ဘာလဲ", tag: "WH-Question Word" },
+      { word: "is", translation: "ဖြစ်သနည်း", tag: "Linking Verb" },
+      {
+        word: "the other English word for zero",
+        translation: "သုညကို ဆိုလိုသည့် အခြား အင်္ဂလိပ် စကားလုံးမှာ",
+        tag: "Noun Subject",
+      },
+    ],
+    introMy: "ဒါက be-ကြိယာသုံး WH-မေးခွန်းပါ။ “for zero” က စကားလုံးကို ဖော်ပြသည့် အပိုင်းပါ။",
+    noteMy: "ပုံစံ: What → be-ကြိယာ (is) → ကတ္တား ။",
+  },
+  'how do we use "0" today': {
+    cars: [
+      { word: "How", translation: "ဘယ်လို", tag: "WH-Question Word" },
+      { word: "do", translation: "…သနည်း", tag: "Helping Verb" },
+      { word: "we", translation: "ကျွန်ုပ်တို့သည်", tag: "Noun Subject" },
+      { word: "use", translation: "အသုံးပြုသည်", tag: "Main Verb" },
+      { word: '"0"', translation: "“၀” ကို", tag: "Noun Object" },
+      { word: "today", translation: "ယနေ့အချိန်တွင်", tag: "Adverb" },
+    ],
+    introMy: "အဓိကကြိယာမှာ “use” ဖြစ်ပြီး “do” သည် မေးခွန်းပြုလုပ်ရန် အကူကြိယာသာ ဖြစ်သည်။",
+    noteMy: "ပုံစံ: How → အကူကြိယာ (do) → ကတ္တား (we) → အဓိကကြိယာ (use) → ကံ → ကာလပြ စကားလုံး ။",
+  },
 };
 
 export const TAG_INFO: Record<string, { titleMy: string; bodyMy: string; example?: string }> = {
@@ -626,6 +837,16 @@ export const TAG_INFO: Record<string, { titleMy: string; bodyMy: string; example
     titleMy: "ရည်ရွယ်ချက် အခန်း (Purpose Clause)",
     bodyMy: "'to + verb' နဲ့ စတဲ့ အခန်း — 'ဘာအတွက် / ဘာရည်ရွယ်ချက်နဲ့' လုပ်တာလဲ ဆိုတာ ဖော်ပြပါတယ်။",
     example: "We use graphics to help the reader understand better.",
+  },
+  "Relative Clause": {
+    titleMy: "ဆက်စပ်အခန်း (Relative Clause)",
+    bodyMy: "who, which, that စတဲ့ စကားလုံးနဲ့ စပြီး နာမ်ကို ပြန်ဖော်ပြတဲ့ အခန်းပါ။ ကတ္တားထဲမှာ ပါဝင်နိုင်ပြီး အဓိကကြိယာ မဟုတ်ပါ။",
+    example: "It was the Hindu mathematicians who discovered zero.",
+  },
+  "Adverb": {
+    titleMy: "ကြိယာဝိသေသန (Adverb)",
+    bodyMy: "ကြိယာကို ဖြည့်စွက်ဖော်ပြတဲ့ စကားလုံး — today, now, quickly, often စသည်။ ဘယ်အချိန်၊ ဘယ်လို လုပ်တာလဲ ဆိုတာ ပြပါတယ်။",
+    example: "We use \"0\" today.",
   },
   "Sentence": {
     titleMy: "ဝါကျ (Sentence)",
