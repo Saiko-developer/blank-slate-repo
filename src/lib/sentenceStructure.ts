@@ -838,6 +838,16 @@ export const TAG_INFO: Record<string, { titleMy: string; bodyMy: string; example
     bodyMy: "'to + verb' နဲ့ စတဲ့ အခန်း — 'ဘာအတွက် / ဘာရည်ရွယ်ချက်နဲ့' လုပ်တာလဲ ဆိုတာ ဖော်ပြပါတယ်။",
     example: "We use graphics to help the reader understand better.",
   },
+  "Relative Clause": {
+    titleMy: "ဆက်စပ်အခန်း (Relative Clause)",
+    bodyMy: "who, which, that စတဲ့ စကားလုံးနဲ့ စပြီး နာမ်ကို ပြန်ဖော်ပြတဲ့ အခန်းပါ။ ကတ္တားထဲမှာ ပါဝင်နိုင်ပြီး အဓိကကြိယာ မဟုတ်ပါ။",
+    example: "It was the Hindu mathematicians who discovered zero.",
+  },
+  "Adverb": {
+    titleMy: "ကြိယာဝိသေသန (Adverb)",
+    bodyMy: "ကြိယာကို ဖြည့်စွက်ဖော်ပြတဲ့ စကားလုံး — today, now, quickly, often စသည်။ ဘယ်အချိန်၊ ဘယ်လို လုပ်တာလဲ ဆိုတာ ပြပါတယ်။",
+    example: "We use \"0\" today.",
+  },
   "Sentence": {
     titleMy: "ဝါကျ (Sentence)",
     bodyMy: "အပြည့်အစုံ အဓိပ္ပာယ်ရှိတဲ့ စကားစု — ကံတ္တား + ကြိယာ ပါဝင်တယ်။",
