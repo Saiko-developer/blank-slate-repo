@@ -39,7 +39,14 @@ export function Unit5SkillView({ skill }: { skill: PracticeSkill }) {
 
 function ReadingView5() {
   const { unit, supplement } = useCurriculumUnit5();
-  const { partA5A_translations, partB5A_translations, partC5A_translations } = supplement;
+  const {
+    partA5A_translations,
+    partB5A_translations,
+    partC5A_translations,
+    partA5A_breakdowns,
+    partB5A_breakdowns,
+    partC5A_breakdowns,
+  } = supplement;
   const data = unit.sections[0] as any;
   const passage = data.reading_passage;
   const comp = data.comprehension;
@@ -109,6 +116,7 @@ function ReadingView5() {
             text: e.text,
             translation: partA5A_translations[e.question_number] ?? "",
             answer: e.answer,
+            breakdown: partA5A_breakdowns[e.question_number],
           }))}
         />
 
@@ -121,6 +129,7 @@ function ReadingView5() {
             text: e.question,
             translation: partB5A_translations[e.question_number] ?? "",
             answer: e.answer,
+            breakdown: partB5A_breakdowns[e.question_number],
           }))}
         />
 
@@ -134,6 +143,7 @@ function ReadingView5() {
               text: e.question ?? e.text,
               translation: partC5A_translations[e.question_number] ?? "",
               answer: e.answer,
+              breakdown: partC5A_breakdowns[e.question_number],
             }))}
           />
         ) : null}

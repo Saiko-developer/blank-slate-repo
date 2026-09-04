@@ -11,11 +11,15 @@ import {
   partA5A_translations,
   partB5A_translations,
   partC5A_translations,
+  partA5A_breakdowns,
+  partB5A_breakdowns,
+  partC5A_breakdowns,
   partA5B_translations,
   partB5B_translations,
   partA5C_translations,
   partB5C_translations,
   vocab5B,
+  type SentenceBreakdown,
   type VocabItem,
 } from "@/data/unit5Supplement";
 
@@ -23,6 +27,9 @@ export type Unit5Supplement = {
   partA5A_translations: Record<number, string>;
   partB5A_translations: Record<number, string>;
   partC5A_translations: Record<number, string>;
+  partA5A_breakdowns: Record<number, SentenceBreakdown>;
+  partB5A_breakdowns: Record<number, SentenceBreakdown>;
+  partC5A_breakdowns: Record<number, SentenceBreakdown>;
   partA5B_translations: Record<number, string>;
   partB5B_translations: Record<number, string>;
   partA5C_translations: Record<number, string>;
@@ -49,6 +56,9 @@ const UNIT5_SUPPLEMENT: Unit5Supplement = {
   partA5A_translations,
   partB5A_translations,
   partC5A_translations,
+  partA5A_breakdowns,
+  partB5A_breakdowns,
+  partC5A_breakdowns,
   partA5B_translations,
   partB5B_translations,
   partA5C_translations,
