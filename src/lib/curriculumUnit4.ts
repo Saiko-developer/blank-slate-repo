@@ -28,6 +28,8 @@ export type Unit4Supplement = {
   partA4A_translations: Record<number, string>;
   partB4A_translations: Record<number, string>;
   partC4A_translations: Record<number, string>;
+  partA4A_breakdowns: Record<number, import("@/data/unit4Supplement").SentenceBreakdown>;
+  partB4A_breakdowns: Record<number, import("@/data/unit4Supplement").SentenceBreakdown>;
   partA4B_translations: Record<number, string>;
   partB4B_translations: Record<number, string>;
   partC4B_translations: Record<number, string>;
