@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node dev-server.mjs",
-    "build": "echo \"no build step\"",
-    "build:dev": "echo \"no build step\""
+    "build": "node build.mjs",
+    "build:dev": "node build.mjs"
   }
 }
