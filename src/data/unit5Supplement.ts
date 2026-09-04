@@ -4,6 +4,8 @@
 // `unit4Supplement.ts`. Units 1, 2, 3 and 4 data are never touched by this
 // module.
 
+import type { TrainCar } from "@/lib/sentenceStructure";
+
 export type VocabItem = {
   word: string;
   pronunciation: string; // simple phonetic guide
@@ -41,6 +43,259 @@ export const partC5A_translations: Record<number, string> = {
   9: "သင်သည် ရထားဖြင့် ခရီးသွားခြင်းကို နှစ်သက်ပါသလား။ အဘယ်ကြောင့်နည်း သို့မဟုတ် အဘယ်ကြောင့် မနှစ်သက်သနည်း။",
   10: "ဝေးလံသော မြို့တစ်မြို့သို့ လေယာဉ် သို့မဟုတ် ရထားဖြင့် သွားနိုင်လျှင် မည်သည့် သယ်ယူပို့ဆောင်ရေးနည်းလမ်းကို ရွေးချယ်မည်နည်း။ အဘယ်ကြောင့်နည်း။",
 };
+
+/* ------------- 5A Sentence-structure breakdowns (curated) --------------- */
+// Rules for this data:
+//  • Grammar tags stay in English; every translation string is pure Burmese.
+//  • The real predicate verb is isolated as [Main Verb] / [Linking Verb];
+//    prepositions and articles are never separate blocks — they always travel
+//    inside their complete phrase.
+//  • A leading prepositional phrase is a modifier, never the [Noun Subject].
+//  • Translations follow Burmese SOV order, phrase by phrase.
+
+export type SentenceBreakdown = {
+  introMy: string;
+  noteMy: string;
+  cars: TrainCar[];
+};
+
+const SV_INTRO5 =
+  "ဤဝါကျကို အပိုင်းလိုက် ခွဲကြည့်ပါ — မည်သူ/မည်သည့်အရာ (ကတ္တား) ၊ ဘာလုပ်သည်/ဘာဖြစ်သည် (ကြိယာ) ၊ ဘာကို (ကံ) ဟူ၍ ဖြစ်သည်။";
+const SV_NOTE5 =
+  "ပုံစံ: ကတ္တား → ကြိယာ → ကံ ။ ဝိဘတ်စကားစုနှင့် အညွှန်းစကားလုံးများကို တစ်လုံးချင်း မခွဲဘဲ စကားစုတစ်ခုလုံးအဖြစ် ဖတ်ပါ။";
+const WH_INTRO5 =
+  "မေးခွန်းဝါကျဖြစ်သဖြင့် မေးခွန်းစကားလုံးက ရှေ့ဆုံးတွင် ရပ်ပြီး အကူကြိယာက ကတ္တားရှေ့သို့ ရွှေ့သွားသည်။";
+const WH_NOTE5 =
+  "ပုံစံ: မေးခွန်းစကားလုံး → အကူကြိယာ → ကတ္တား → ကြိယာ/ကံ ။ မြန်မာလို ပြန်ဆိုသည့်အခါ ကြိယာကို နောက်ဆုံးတွင် ထားပါ။";
+
+export const partA5A_breakdowns: Record<number, SentenceBreakdown> = {
+  1: {
+    introMy: SV_INTRO5,
+    noteMy: SV_NOTE5,
+    cars: [
+      {
+        word: "Among the different means of transport",
+        translation: "မတူညီသော သယ်ယူပို့ဆောင်ရေး နည်းလမ်းများအနက်",
+        tag: "Prepositional Phrase",
+      },
+      { word: "one that is widely used today", translation: "ယနေ့ ကျယ်ကျယ်ပြန့်ပြန့် အသုံးပြုနေသော တစ်ခုမှာ", tag: "Noun Subject" },
+      { word: "is", translation: "ဖြစ်သည်", tag: "Linking Verb" },
+      { word: "________", translation: "__________", tag: "Complement" },
+    ],
+  },
+  2: {
+    introMy: SV_INTRO5,
+    noteMy: SV_NOTE5,
+    cars: [
+      { word: "The first steam locomotive", translation: "ပထမဆုံး ရေနွေးငွေ့စက်ခေါင်းကို", tag: "Noun Subject" },
+      { word: "was used", translation: "အသုံးပြုခဲ့သည်", tag: "Main Verb" },
+      { word: "to carry ________", translation: "__________ သယ်ယူရန်အတွက်", tag: "Infinitive Phrase" },
+    ],
+  },
+  3: {
+    introMy: SV_INTRO5,
+    noteMy: SV_NOTE5,
+    cars: [
+      { word: "________", translation: "__________ သည်", tag: "Noun Subject" },
+      { word: "built", translation: "တည်ဆောက်ခဲ့သည်", tag: "Main Verb" },
+      { word: "the first electric locomotive", translation: "ပထမဆုံး လျှပ်စစ်စက်ခေါင်းကို", tag: "Noun Object" },
+      { word: "only in 1837", translation: "၁၈၃၇ ခုနှစ်တွင်မှသာ", tag: "Prepositional Phrase" },
+    ],
+  },
+  4: {
+    introMy: SV_INTRO5,
+    noteMy: SV_NOTE5,
+    cars: [
+      { word: "People", translation: "လူများသည်", tag: "Noun Subject" },
+      { word: "started using", translation: "စတင် အသုံးပြုခဲ့ကြသည်", tag: "Main Verb" },
+      { word: "diesel-electric locomotives", translation: "ဒီဇယ်-လျှပ်စစ် စက်ခေါင်းများကို", tag: "Noun Object" },
+      { word: "only in ________", translation: "__________ ၌မှသာ", tag: "Prepositional Phrase" },
+    ],
+  },
+  5: {
+    introMy: SV_INTRO5,
+    noteMy: SV_NOTE5,
+    cars: [
+      { word: "The skytrain system", translation: "ကောင်းကင်ရထားစနစ်သည်", tag: "Noun Subject" },
+      {
+        word: "in ________, our neighbouring country",
+        translation: "ကျွန်ုပ်တို့၏ အိမ်နီးချင်းနိုင်ငံ __________ တွင်",
+        tag: "Prepositional Phrase",
+      },
+      { word: "in 1999", translation: "၁၉၉၉ ခုနှစ်၌", tag: "Prepositional Phrase" },
+      { word: "started operating", translation: "စတင် ပြေးဆွဲခဲ့သည်", tag: "Main Verb" },
+    ],
+  },
+};
+
+export const partB5A_breakdowns: Record<number, SentenceBreakdown> = {
+  1: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "How many types of train", translation: "ရထား အမျိုးအစား မည်မျှကို", tag: "Question Phrase" },
+      { word: "in general", translation: "ယေဘုယျအားဖြင့်", tag: "Adverb Phrase" },
+      { word: "have been invented", translation: "တီထွင်ခဲ့သနည်း", tag: "Main Verb" },
+    ],
+  },
+  2: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "Who", translation: "မည်သူသည်", tag: "Question Word" },
+      { word: "developed", translation: "တီထွင်ခဲ့သနည်း", tag: "Main Verb" },
+      { word: "the first steam engine", translation: "ပထမဆုံး ရေနွေးငွေ့အင်ဂျင်ကို", tag: "Noun Object" },
+      { word: "and when", translation: "ထို့ပြင် မည်သည့်အချိန်တွင်နည်း", tag: "Question Word" },
+    ],
+  },
+  3: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "What", translation: "မည်သည့်အရာဖြင့်", tag: "Question Word" },
+      { word: "was", translation: "ဖြစ်သနည်း", tag: "Auxiliary Verb" },
+      {
+        word: "the first electric train built in 1837",
+        translation: "၁၈၃၇ ခုနှစ်တွင် တည်ဆောက်ခဲ့သော ပထမဆုံး လျှပ်စစ်ရထားကို",
+        tag: "Noun Subject",
+      },
+      { word: "powered by", translation: "မောင်းနှင်ခဲ့သနည်း", tag: "Main Verb" },
+    ],
+  },
+  4: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "What", translation: "အဘယ်အရာနည်း", tag: "Question Word" },
+      { word: "is", translation: "ဖြစ်သနည်း", tag: "Linking Verb" },
+      {
+        word: "the greatest disadvantage of an electric train",
+        translation: "လျှပ်စစ်ရထားတစ်စင်း၏ အကြီးမားဆုံး အားနည်းချက်မှာ",
+        tag: "Noun Subject",
+      },
+    ],
+  },
+  5: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "Until when", translation: "မည်သည့်အချိန်အထိ", tag: "Question Phrase" },
+      { word: "did", translation: "သနည်း", tag: "Auxiliary Verb" },
+      { word: "steam engine trains", translation: "ရေနွေးငွေ့အင်ဂျင်ရထားများသည်", tag: "Noun Subject" },
+      { word: "remain important", translation: "အရေးပါနေခဲ့သနည်း", tag: "Main Verb" },
+    ],
+  },
+};
+
+export const partC5A_breakdowns: Record<number, SentenceBreakdown> = {
+  1: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "What", translation: "မည်သည့်အရာကို", tag: "Question Word" },
+      { word: "does", translation: "သနည်း", tag: "Auxiliary Verb" },
+      { word: "the word 'its' in line 3", translation: "စာကြောင်းရေ ၃ ရှိ 'its' ဟူသော စကားလုံးသည်", tag: "Noun Subject" },
+      { word: "refer to", translation: "ရည်ညွှန်းသနည်း", tag: "Main Verb" },
+    ],
+  },
+  2: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "What", translation: "မည်သည့်အရာကို", tag: "Question Word" },
+      { word: "does", translation: "သနည်း", tag: "Auxiliary Verb" },
+      { word: "the word 'They' in line 14", translation: "စာကြောင်းရေ ၁၄ ရှိ 'They' ဟူသော စကားလုံးသည်", tag: "Noun Subject" },
+      { word: "refer to", translation: "ရည်ညွှန်းသနည်း", tag: "Main Verb" },
+    ],
+  },
+  3: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "What type of locomotive", translation: "မည်သည့် စက်ခေါင်းအမျိုးအစားကို", tag: "Question Phrase" },
+      { word: "is not used or developed", translation: "အသုံးမပြု သို့မဟုတ် တီထွင်ခြင်း မပြုတော့သနည်း", tag: "Main Verb" },
+      { word: "anymore", translation: "ယခုအခါ", tag: "Adverb" },
+      { word: "Why", translation: "အဘယ်ကြောင့်နည်း", tag: "Question Word" },
+    ],
+  },
+  4: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "What", translation: "အဘယ်အရာနည်း", tag: "Question Word" },
+      { word: "is", translation: "ဖြစ်သနည်း", tag: "Linking Verb" },
+      { word: "a skytrain", translation: "ကောင်းကင်ရထားဆိုသည်မှာ", tag: "Noun Subject" },
+    ],
+  },
+  5: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "What", translation: "မည်သည့်အရာကို", tag: "Question Word" },
+      { word: "does", translation: "သနည်း", tag: "Auxiliary Verb" },
+      { word: "the word 'that' in line 41", translation: "စာကြောင်းရေ ၄၁ ရှိ 'that' ဟူသော စကားလုံးသည်", tag: "Noun Subject" },
+      { word: "refer to", translation: "ရည်ညွှန်းသနည်း", tag: "Main Verb" },
+    ],
+  },
+  6: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "Why", translation: "အဘယ်ကြောင့်", tag: "Question Word" },
+      { word: "are", translation: "သနည်း", tag: "Auxiliary Verb" },
+      { word: "skytrains", translation: "ကောင်းကင်ရထားများကို", tag: "Noun Subject" },
+      { word: "used", translation: "အသုံးပြုကြသနည်း", tag: "Main Verb" },
+      { word: "in many countries", translation: "နိုင်ငံများစွာတွင်", tag: "Prepositional Phrase" },
+    ],
+  },
+  7: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "What", translation: "အဘယ်အရာများနည်း", tag: "Question Word" },
+      { word: "are", translation: "ဖြစ်သနည်း", tag: "Linking Verb" },
+      { word: "the fastest trains at present", translation: "လက်ရှိအချိန်တွင် အမြန်ဆုံး ရထားများမှာ", tag: "Noun Subject" },
+      { word: "How fast can they travel", translation: "၎င်းတို့သည် မည်မျှ မြန်နှုန်းဖြင့် သွားနိုင်သနည်း", tag: "Question Clause" },
+    ],
+  },
+  8: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "Why", translation: "အဘယ်ကြောင့်", tag: "Question Word" },
+      { word: "are", translation: "ဖြစ်နေဆဲနည်း", tag: "Linking Verb" },
+      { word: "trains", translation: "ရထားများသည်", tag: "Noun Subject" },
+      { word: "still an important means of transport", translation: "အရေးပါသော သယ်ယူပို့ဆောင်ရေးနည်းလမ်း", tag: "Complement" },
+      { word: "in the world", translation: "ကမ္ဘာပေါ်တွင်", tag: "Prepositional Phrase" },
+    ],
+  },
+  9: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      { word: "Do", translation: "သလား", tag: "Auxiliary Verb" },
+      { word: "you", translation: "သင်သည်", tag: "Noun Subject" },
+      { word: "like", translation: "နှစ်သက်ပါသလား", tag: "Main Verb" },
+      { word: "travelling by train", translation: "ရထားဖြင့် ခရီးသွားခြင်းကို", tag: "Noun Object" },
+      { word: "Why or why not", translation: "အဘယ်ကြောင့်နည်း သို့မဟုတ် အဘယ်ကြောင့် မဟုတ်သနည်း", tag: "Question Phrase" },
+    ],
+  },
+  10: {
+    introMy: WH_INTRO5,
+    noteMy: WH_NOTE5,
+    cars: [
+      {
+        word: "If you could travel to a distant town by plane or train",
+        translation: "ဝေးလံသော မြို့တစ်မြို့သို့ လေယာဉ် သို့မဟုတ် ရထားဖြင့် သွားနိုင်ပါက",
+        tag: "Conditional Clause",
+      },
+      { word: "which form of transport", translation: "မည်သည့် သယ်ယူပို့ဆောင်ရေးပုံစံကို", tag: "Noun Object" },
+      { word: "will you choose", translation: "သင် ရွေးချယ်မည်နည်း", tag: "Main Verb" },
+      { word: "Why", translation: "အဘယ်ကြောင့်နည်း", tag: "Question Word" },
+    ],
+  },
+};
+
 /* ---------------------------- 5B Vocabulary ---------------------------- */
 
 export const partA5B_translations: Record<number, string> = {
