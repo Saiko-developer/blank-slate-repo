@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "echo \"no dev server\"",
+    "dev": "node dev-server.mjs",
     "build": "echo \"no build step\""
   }
 }
