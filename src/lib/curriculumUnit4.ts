@@ -11,6 +11,8 @@ import {
   partA4A_translations,
   partB4A_translations,
   partC4A_translations,
+  partA4A_breakdowns,
+  partB4A_breakdowns,
   partA4B_translations,
   partB4B_translations,
   partC4B_translations,
@@ -26,6 +28,8 @@ export type Unit4Supplement = {
   partA4A_translations: Record<number, string>;
   partB4A_translations: Record<number, string>;
   partC4A_translations: Record<number, string>;
+  partA4A_breakdowns: Record<number, import("@/data/unit4Supplement").SentenceBreakdown>;
+  partB4A_breakdowns: Record<number, import("@/data/unit4Supplement").SentenceBreakdown>;
   partA4B_translations: Record<number, string>;
   partB4B_translations: Record<number, string>;
   partC4B_translations: Record<number, string>;
@@ -55,6 +59,8 @@ const UNIT4_SUPPLEMENT: Unit4Supplement = {
   partA4A_translations,
   partB4A_translations,
   partC4A_translations,
+  partA4A_breakdowns,
+  partB4A_breakdowns,
   partA4B_translations,
   partB4B_translations,
   partC4B_translations,

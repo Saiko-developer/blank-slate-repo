@@ -39,7 +39,13 @@ export function Unit4SkillView({ skill }: { skill: PracticeSkill }) {
 
 function ReadingView4() {
   const { unit, supplement } = useCurriculumUnit4();
-  const { partA4A_translations, partB4A_translations, partC4A_translations } = supplement;
+  const {
+    partA4A_translations,
+    partB4A_translations,
+    partC4A_translations,
+    partA4A_breakdowns,
+    partB4A_breakdowns,
+  } = supplement;
   const data = unit.sections[0] as any;
   const passage = data.reading_passage;
   const comp = data.comprehension;
@@ -109,6 +115,7 @@ function ReadingView4() {
             text: e.text,
             translation: partA4A_translations[e.question_number] ?? "",
             answer: e.answer,
+            breakdown: partA4A_breakdowns[e.question_number],
           }))}
         />
 
@@ -121,6 +128,7 @@ function ReadingView4() {
             text: e.question,
             translation: partB4A_translations[e.question_number] ?? "",
             answer: e.answer,
+            breakdown: partB4A_breakdowns[e.question_number],
           }))}
         />
 
