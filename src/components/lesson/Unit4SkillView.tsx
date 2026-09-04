@@ -110,25 +110,27 @@ function ReadingView4() {
           title="Exercise A — Complete each sentence"
           titleMy="လေ့ကျင့်ခန်း A — စာကြောင်းများ ဖြည့်စွက်ပါ"
           instructions={comp.part_A.instructions}
-          items={comp.part_A.exercises.map((e: any) => ({
-            id: e.question_number,
-            text: e.text,
-            translation: partA4A_translations[e.question_number] ?? "",
-            answer: e.answer,
-          }))}
-        />
+        items={comp.part_A.exercises.map((e: any) => ({
+          id: e.question_number,
+          text: e.text,
+          translation: partA4A_translations[e.question_number] ?? "",
+          answer: e.answer,
+          breakdown: partA4A_breakdowns[e.question_number],
+        }))}
+      />
 
-        <ExerciseGroup
-          title="Exercise B — Full-sentence answers"
-          titleMy="လေ့ကျင့်ခန်း B — စာကြောင်းအပြည့် အဖြေများ"
-          instructions={comp.part_B.instructions}
-          items={comp.part_B.exercises.map((e: any) => ({
-            id: e.question_number,
-            text: e.question,
-            translation: partB4A_translations[e.question_number] ?? "",
-            answer: e.answer,
-          }))}
-        />
+      <ExerciseGroup
+        title="Exercise B — Full-sentence answers"
+        titleMy="လေ့ကျင့်ခန်း B — စာကြောင်းအပြည့် အဖြေများ"
+        instructions={comp.part_B.instructions}
+        items={comp.part_B.exercises.map((e: any) => ({
+          id: e.question_number,
+          text: e.question,
+          translation: partB4A_translations[e.question_number] ?? "",
+          answer: e.answer,
+          breakdown: partB4A_breakdowns[e.question_number],
+        }))}
+      />
 
         {comp.part_C?.exercises?.length ? (
           <section className="rounded-2xl border border-border bg-card p-5">
