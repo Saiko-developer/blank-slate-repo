@@ -4,6 +4,8 @@
 // `unit4Supplement.ts`. Units 1, 2, 3 and 4 data are never touched by this
 // module.
 
+import type { TrainCar } from "@/lib/sentenceStructure";
+
 export type VocabItem = {
   word: string;
   pronunciation: string; // simple phonetic guide
