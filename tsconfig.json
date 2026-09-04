@@ -3,10 +3,12 @@
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
+    "allowJs": true,
+    "checkJs": false,
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true
   },
   "include": ["**/*.ts", "**/*.mjs"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
