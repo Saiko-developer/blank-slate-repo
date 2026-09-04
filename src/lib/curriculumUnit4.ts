@@ -59,6 +59,8 @@ const UNIT4_SUPPLEMENT: Unit4Supplement = {
   partA4A_translations,
   partB4A_translations,
   partC4A_translations,
+  partA4A_breakdowns,
+  partB4A_breakdowns,
   partA4B_translations,
   partB4B_translations,
   partC4B_translations,
