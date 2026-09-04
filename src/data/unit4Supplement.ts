@@ -3,6 +3,8 @@
 // `unit1Supplement.ts`, `unit2Supplement.ts` and `unit3Supplement.ts`.
 // Unit 1, 2 and 3 data are never touched by this module.
 
+import type { TrainCar } from "@/lib/sentenceStructure";
+
 export type VocabItem = {
   word: string;
   pronunciation: string; // simple phonetic guide
